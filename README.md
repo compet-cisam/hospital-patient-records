@@ -1,37 +1,44 @@
-# Hospital Patient Records Analysis
+# Hospital Patient Records Analysis - Maternity Focus
 
-A comprehensive data analysis project focused on analyzing hospital patient records to extract meaningful insights about patient demographics, medical procedures, costs, and outcomes. This project is part of the CISAM competition initiative.
+A comprehensive data analysis project focused on analyzing hospital patient records with a specific emphasis on **maternity care and female patient outcomes**. This project analyzes female patient demographics, medical conditions, treatment outcomes, and satisfaction patterns while excluding financial data to focus purely on clinical and care quality metrics. This project is part of the CISAM competition initiative.
 
 ## 📋 Project Overview
 
-This project analyzes a dataset of hospital patient records containing information about patient demographics, medical conditions, procedures, costs, length of stay, readmission rates, and patient satisfaction. The analysis aims to identify patterns and trends that can help improve healthcare delivery and patient outcomes.
+This project analyzes a filtered dataset of hospital patient records focusing exclusively on **female patients** to better understand maternity care patterns and women's healthcare outcomes. The analysis examines patient demographics, medical conditions, procedures, length of stay, readmission rates, and patient satisfaction scores. By focusing on female patients and excluding cost analysis, this study aims to identify patterns and trends that can help improve maternal healthcare delivery and patient outcomes.
 
 ## 🎯 Features
 
-- **Patient Demographics Analysis**: Age and gender distribution analysis
-- **Medical Condition Insights**: Analysis of common conditions and their treatment patterns
-- **Cost Analysis**: Healthcare cost patterns and factors affecting treatment expenses
-- **Length of Stay Analysis**: Factors influencing hospital stay duration
-- **Readmission Rate Study**: Identification of patterns in patient readmissions
-- **Patient Satisfaction Metrics**: Analysis of satisfaction scores and their correlations
-- **Outcome Tracking**: Recovery and stability outcome analysis
+- **Female Patient Demographics Analysis**: Age and gender distribution analysis focused on maternity care
+- **Medical Condition Insights**: Analysis of conditions affecting female patients and maternity-related care
+- **Maternity Care Focus**: Specialized analysis of childbirth and pregnancy-related cases
+- **Length of Stay Analysis**: Factors influencing hospital stay duration for female patients
+- **Readmission Rate Study**: Identification of readmission patterns in female patients
+- **Patient Satisfaction Metrics**: Analysis of satisfaction scores and their correlations with outcomes
+- **Outcome Tracking**: Recovery and stability outcome analysis for female patients
+- **Non-Financial Analysis**: Focus on clinical and care quality metrics without cost considerations
 
 ## 📊 Dataset Information
 
-The dataset contains **984 patient records** with the following attributes:
+The dataset contains **filtered female patient records** from the original hospital dataset with the following characteristics:
+
+**Analysis Focus:**
+- **Female patients only** - Filtered to focus on maternity and women's healthcare
+- **Non-financial analysis** - Cost data excluded to focus on clinical outcomes
+- **Maternity care emphasis** - Special attention to childbirth and pregnancy-related cases
 
 | Column | Description |
 |--------|-------------|
 | Patient_ID | Unique identifier for each patient |
 | Age | Patient age |
-| Gender | Patient gender (Male/Female) |
+| Gender | Patient gender (Female only in filtered dataset) |
 | Condition | Medical condition/diagnosis |
 | Procedure | Medical procedure performed |
-| Cost | Treatment cost |
 | Length_of_Stay | Number of days in hospital |
 | Readmission | Whether patient was readmitted (Yes/No) |
 | Outcome | Treatment outcome (Recovered/Stable) |
 | Satisfaction | Patient satisfaction score (1-5) |
+
+**Note:** The original dataset contained both male and female patients with cost information, but this analysis focuses specifically on female patients with cost data removed to emphasize clinical care quality metrics.
 
 ## 🚀 Getting Started
 
@@ -39,32 +46,41 @@ The dataset contains **984 patient records** with the following attributes:
 
 - Python 3.7 or higher
 - Jupyter Notebook or JupyterLab
-- Required Python packages (install using pip):
+- Required Python packages:
 
 ```bash
-pip install pandas numpy matplotlib seaborn jupyter
+pip install pandas numpy matplotlib seaborn scipy jupyter
 ```
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/your-username/hospital-patient-records.git
 cd hospital-patient-records
 ```
 
 2. Install required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
-*Note: If requirements.txt doesn't exist, install the packages mentioned in Prerequisites*
+
+Or install packages individually:
+
+```bash
+pip install pandas numpy matplotlib seaborn scipy jupyter
+```
 
 3. Launch Jupyter Notebook:
+
 ```bash
 jupyter notebook
 ```
 
 4. Open the analysis notebook:
+
 ```
 src/hospital-patient-records.ipynb
 ```
@@ -91,32 +107,49 @@ hospital-patient-records/
 
 1. **Open the Jupyter Notebook**: Navigate to `src/hospital-patient-records.ipynb`
 
-2. **Load the Dataset**: The notebook will load data from `src/data/hospital data analysis.csv`
+2. **Load the Dataset**: The notebook automatically loads data from `src/data/hospital data analysis.csv`, filters for female patients only, and removes financial data
 
-3. **Run Analysis Cells**: Execute cells sequentially to perform various analyses:
-   - Data exploration and cleaning
-   - Descriptive statistics
-   - Visualization of key metrics
-   - Pattern identification
-   - Insights generation
+3. **Run Analysis Cells**: Execute cells sequentially to perform maternity-focused analyses:
+   - Data exploration and cleaning (female patients only)
+   - Demographic analysis for women's healthcare
+   - Medical conditions analysis with maternity focus
+   - Length of stay patterns for female patients
+   - Readmission and outcomes analysis
+   - Patient satisfaction metrics
+   - Correlation analysis (non-financial variables)
 
-4. **Interpret Results**: Review the generated charts, statistics, and insights to understand hospital patient patterns
+4. **Interpret Results**: Review the generated charts, statistics, and insights to understand female patient and maternity care patterns
 
 ### Example Analysis Areas
 
-- **Cost vs. Length of Stay**: Analyze the relationship between treatment costs and hospital stay duration
-- **Readmission Patterns**: Identify factors that contribute to patient readmissions
-- **Satisfaction Analysis**: Examine what drives patient satisfaction scores
-- **Demographic Insights**: Understand how age and gender affect treatment outcomes
+- **Maternity Demographics**: Analyze age distribution and patterns in female patients
+- **Childbirth vs. Other Conditions**: Compare treatment patterns between maternity and other medical conditions
+- **Female Patient Satisfaction**: Examine satisfaction drivers specific to women's healthcare
+- **Non-Financial Outcomes**: Focus on clinical quality metrics without cost considerations
+- **Readmission Patterns**: Identify factors affecting female patient readmissions
 
 ## 🔍 Key Insights
 
-*This section will be populated as the analysis progresses with findings such as:*
+Based on the maternity-focused analysis of female patients:
 
-- Average length of stay by medical condition
-- Cost patterns across different procedures
-- Readmission rates by demographic groups
-- Satisfaction score correlations with outcomes
+### Demographics & Patient Profile
+- **Focused Dataset**: Analysis of female patients only, excluding financial data
+- **Age Distribution**: Comprehensive age analysis for women's healthcare patterns
+- **Maternity Cases**: Specific tracking of childbirth and pregnancy-related conditions
+
+### Clinical Outcomes
+- **Treatment Outcomes**: Recovery and stability rates for female patients
+- **Length of Stay**: Hospital duration patterns specific to women's healthcare needs
+- **Readmission Rates**: Patterns in female patient readmissions, including maternity cases
+- **Patient Satisfaction**: Satisfaction scores analyzed specifically for women's healthcare experience
+
+### Analytical Focus
+- **Non-Financial Metrics**: Emphasis on clinical quality rather than cost factors
+- **Maternity Care**: Specialized insights into childbirth and pregnancy-related healthcare
+- **Correlation Analysis**: Relationships between age, length of stay, and satisfaction for female patients
+- **Condition-Specific Patterns**: Treatment variations across different medical conditions affecting women
+
+*Note: Specific numerical insights are generated dynamically in the Jupyter notebook based on the current dataset analysis.*
 
 ## 🤝 Contributing
 
@@ -136,11 +169,14 @@ This project is created for educational and competition purposes. Please refer t
 
 - **Author**: Gabriel Borges
 - **Organization**: COMPET CISAM
-- **Tools Used**: 
-  - Python for data analysis
-  - Pandas for data manipulation
-  - Matplotlib/Seaborn for visualization
-  - Jupyter Notebook for interactive analysis
+- **Project Focus**: Maternity and Women's Healthcare Analysis
+- **Tools Used**:
+  - Python for data analysis and statistical computing
+  - Pandas for data manipulation and filtering
+  - NumPy for numerical computations
+  - Matplotlib/Seaborn for data visualization
+  - SciPy for statistical analysis
+  - Jupyter Notebook for interactive analysis and documentation
 
 ## 📞 Contact
 
@@ -148,4 +184,4 @@ For questions about this analysis or collaboration opportunities, please reach o
 
 ---
 
-*This README was generated to provide comprehensive documentation for the Hospital Patient Records Analysis project. Update this file as the analysis evolves and new insights are discovered.*
+*This README documents the Hospital Patient Records Analysis project with a specialized focus on maternity care and women's healthcare outcomes. The analysis excludes financial data to emphasize clinical quality metrics and patient care patterns. Update this file as the analysis evolves and new insights are discovered.*
